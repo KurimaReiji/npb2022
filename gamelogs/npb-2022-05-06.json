@@ -1,0 +1,53 @@
+{
+  "date": "5月6日（金）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0506/g-s-07/",
+      "home": "読売ジャイアンツ",
+      "road": "東京ヤクルトスワローズ",
+      "score": "2 - 13",
+      "place": "東京ドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0506/d-t-06/",
+      "home": "中日ドラゴンズ",
+      "road": "阪神タイガース",
+      "score": "1 - 0",
+      "place": "バンテリンドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0506/c-db-07/",
+      "home": "広島東洋カープ",
+      "road": "横浜DeNAベイスターズ",
+      "score": "3 - 4",
+      "place": "マツダスタジアム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0506/l-f-06/",
+      "home": "埼玉西武ライオンズ",
+      "road": "北海道日本ハムファイターズ",
+      "score": "5 - 0",
+      "place": "ベルーナドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0506/m-h-06/",
+      "home": "千葉ロッテマリーンズ",
+      "road": "福岡ソフトバンクホークス",
+      "score": "3 - 5",
+      "place": "ZOZOマリン",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0506/b-e-04/",
+      "home": "オリックス・バファローズ",
+      "road": "東北楽天ゴールデンイーグルス",
+      "score": "2 - 3",
+      "place": "京セラD大阪",
+      "status": "試合終了"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "date": "4月14日（木）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0414/d-t-03/",
+      "home": "中日ドラゴンズ",
+      "road": "阪神タイガース",
+      "score": "4 - 1",
+      "place": "バンテリンドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0414/h-m-05/",
+      "home": "福岡ソフトバンクホークス",
+      "road": "千葉ロッテマリーンズ",
+      "score": "4 - 0",
+      "place": "PayPayドーム",
+      "status": "試合終了"
+    }
+  ]
+}

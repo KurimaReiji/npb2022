@@ -1,0 +1,37 @@
+{
+  "date": "4月21日（木）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0421/g-c-06/",
+      "home": "読売ジャイアンツ",
+      "road": "広島東洋カープ",
+      "score": "8 - 4",
+      "place": "東京ドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0421/db-t-05/",
+      "home": "横浜DeNAベイスターズ",
+      "road": "阪神タイガース",
+      "score": "7 - 5",
+      "place": "横浜",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0421/e-f-06/",
+      "home": "東北楽天ゴールデンイーグルス",
+      "road": "北海道日本ハムファイターズ",
+      "score": "8 - 5",
+      "place": "楽天生命パーク",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0421/b-h-06/",
+      "home": "オリックス・バファローズ",
+      "road": "福岡ソフトバンクホークス",
+      "score": "3 - 2",
+      "place": "京セラD大阪",
+      "status": "試合終了"
+    }
+  ]
+}

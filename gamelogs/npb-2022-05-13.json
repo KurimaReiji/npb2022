@@ -1,0 +1,37 @@
+{
+  "date": "5月13日（金）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0513/g-d-07/",
+      "home": "読売ジャイアンツ",
+      "road": "中日ドラゴンズ",
+      "score": "5 - 2",
+      "place": "東京ドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0513/f-h-07/",
+      "home": "北海道日本ハムファイターズ",
+      "road": "福岡ソフトバンクホークス",
+      "score": "1 - 0",
+      "place": "札幌ドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0513/l-e-06/",
+      "home": "埼玉西武ライオンズ",
+      "road": "東北楽天ゴールデンイーグルス",
+      "score": "4 - 2",
+      "place": "ベルーナドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0513/b-m-07/",
+      "home": "オリックス・バファローズ",
+      "road": "千葉ロッテマリーンズ",
+      "score": "1 - 4",
+      "place": "京セラD大阪",
+      "status": "試合終了"
+    }
+  ]
+}
