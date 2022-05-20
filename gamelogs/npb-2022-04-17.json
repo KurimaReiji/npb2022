@@ -1,0 +1,53 @@
+{
+  "date": "4月17日（日）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0417/db-s-05/",
+      "home": "横浜DeNAベイスターズ",
+      "road": "東京ヤクルトスワローズ",
+      "score": "4 - 5",
+      "place": "横浜",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0417/t-g-06/",
+      "home": "阪神タイガース",
+      "road": "読売ジャイアンツ",
+      "score": "1 - 3",
+      "place": "甲子園",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0417/c-d-05/",
+      "home": "広島東洋カープ",
+      "road": "中日ドラゴンズ",
+      "score": "4 - 10",
+      "place": "マツダスタジアム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0417/m-f-04/",
+      "home": "千葉ロッテマリーンズ",
+      "road": "北海道日本ハムファイターズ",
+      "score": "0 - 1",
+      "place": "ZOZOマリン",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0417/b-l-06/",
+      "home": "オリックス・バファローズ",
+      "road": "埼玉西武ライオンズ",
+      "score": "4 - 3",
+      "place": "京セラD大阪",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0417/h-e-03/",
+      "home": "福岡ソフトバンクホークス",
+      "road": "東北楽天ゴールデンイーグルス",
+      "score": "4 - 14",
+      "place": "鹿児島",
+      "status": "試合終了"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+name: CI get the results of today's games
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CI_COMMIT_MESSAGE: add game results of today
+      CI_COMMIT_AUTHOR: Github Actions today
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - name: Create now.json
+      run: echo "[\"`TZ=Asia/Taipei date -Isecond`\"]" > www/now.json
+    - name: install puppeteer
+      run: npm ci
+    - name: get results of today
+      run: node ../puppeteer/today.js && jq '.games' npb-2022-*json | jq -s '.|add' > ../www/games2022.json
+      working-directory: ./gamelogs
+    - name: commit and push
+      run: |
+        git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+        git config --global user.email "${{ secrets.MY_SECRET_EMAIL}}"
+        git add .
+        git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+        git push

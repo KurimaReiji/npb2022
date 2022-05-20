@@ -1,0 +1,45 @@
+{
+  "date": "4月9日(土)",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0409/g-s-05/",
+      "home": "読売ジャイアンツ",
+      "road": "東京ヤクルトスワローズ",
+      "score": "3 - 2",
+      "place": "東京ドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0409/t-c-05/",
+      "home": "阪神タイガース",
+      "road": "広島東洋カープ",
+      "score": "1 - 9",
+      "place": "甲子園",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0409/f-e-02/",
+      "home": "北海道日本ハムファイターズ",
+      "road": "東北楽天ゴールデンイーグルス",
+      "score": "5 - 8",
+      "place": "札幌ドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0409/l-h-02/",
+      "home": "埼玉西武ライオンズ",
+      "road": "福岡ソフトバンクホークス",
+      "score": "0 - 0",
+      "place": "ベルーナドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0409/m-b-02/",
+      "home": "千葉ロッテマリーンズ",
+      "road": "オリックス・バファローズ",
+      "score": "2 - 4",
+      "place": "ZOZOマリン",
+      "status": "試合終了"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "date": "3月26日(土)",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0326/g-d-02/",
+      "home": "読売ジャイアンツ",
+      "road": "中日ドラゴンズ",
+      "score": "7 - 5",
+      "place": "東京ドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0326/db-c-02/",
+      "home": "横浜DeNAベイスターズ",
+      "road": "広島東洋カープ",
+      "score": "5 - 10",
+      "place": "横浜",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0326/t-s-02/",
+      "home": "阪神タイガース",
+      "road": "東京ヤクルトスワローズ",
+      "score": "0 - 6",
+      "place": "京セラD大阪",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0326/l-b-02/",
+      "home": "埼玉西武ライオンズ",
+      "road": "オリックス・バファローズ",
+      "score": "5 - 0",
+      "place": "ベルーナドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0326/h-f-02/",
+      "home": "福岡ソフトバンクホークス",
+      "road": "北海道日本ハムファイターズ",
+      "score": "6 - 3",
+      "place": "PayPayドーム",
+      "status": "試合終了"
+    }
+  ]
+}

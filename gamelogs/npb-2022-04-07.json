@@ -1,0 +1,29 @@
+{
+  "date": "4月7日(木)",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0407/s-d-03/",
+      "home": "東京ヤクルトスワローズ",
+      "road": "中日ドラゴンズ",
+      "score": "3 - 11",
+      "place": "神宮",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0407/c-g-03/",
+      "home": "広島東洋カープ",
+      "road": "読売ジャイアンツ",
+      "score": "9 - 2",
+      "place": "マツダスタジアム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0407/h-b-03/",
+      "home": "福岡ソフトバンクホークス",
+      "road": "オリックス・バファローズ",
+      "score": "7 - 3",
+      "place": "PayPayドーム",
+      "status": "試合終了"
+    }
+  ]
+}
