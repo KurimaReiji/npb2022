@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/KurimaReiji/npb2022/issues"
   },
-  "homepage": "https://github.com/KurimaReiji/npb2022#readme"
+  "homepage": "https://github.com/KurimaReiji/npb2022#readme",
+    "dependencies": {
+    "puppeteer": "^13.7.0"
+  },
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
 }
