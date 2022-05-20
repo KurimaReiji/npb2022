@@ -1,5 +1,4 @@
-name: CI get the results of today's games
-
+name: get the results of today
 on:
   workflow_dispatch:
 
@@ -15,11 +14,11 @@ jobs:
       with:
         node-version: 16
     - name: Create now.json
-      run: echo "[\"`TZ=Asia/Taipei date -Isecond`\"]" > www/now.json
+      run: echo "[\"`TZ=Asia/Taipei date -Isecond`\"]" > docs/now.json
     - name: install puppeteer
       run: npm ci
     - name: get results of today
-      run: node ../puppeteer/today.js && jq '.games' npb-2022-*json | jq -s '.|add' > ../www/games2022.json
+      run: node ../puppeteer/today.js && jq '.games' npb-2022-*json | jq -s '.|add' > ../docs/games2022.json
       working-directory: ./gamelogs
     - name: commit and push
       run: |
