@@ -1,0 +1,21 @@
+@use "./npb-colors.scss";
+@use "./npb-above500-chart.scss";
+
+:root {
+  --bg-color: cornsilk;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0; 
+}
+
+.chart-frame {
+  width: 1152px;
+  height: 648px;
+  margin: 3rem auto;
+}
