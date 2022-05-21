@@ -1,0 +1,259 @@
+:root {
+  --central-league-green: #0f8f2e;
+  --pacific-league-blue: #3fb1e5;
+  --interleague-red: #e60012;
+  --dragons-blue: #003378;
+  --dragons-lightblue: #1eb2e9;
+  --carp-red: #d30f1e;
+  --baystars-blue: #0096e0;
+  --baystars-darkblue: #003f8e;
+  --giants-orange: #f97709;
+  --swallows-green: #1a854f;
+  --swallows-green: #008a4a;
+  --swallows-blue: #2e4fb5;
+  --swallows-red: #ec1234;
+  --tigers-yellow: #ffdd00;
+  --tigers-yellow: #e6a930;
+  --tigers-black: #000000;
+  --bafalloes-navy: #092d5a;
+  --bafalloes-black: #000121;
+  --bafalloes-gold: #b8a536;
+  --eagles-winered: #940028;
+  --fighters-blue: #006298;
+  --hawks-gold: #ffb300;
+  --lions-navy: #00214b;
+  --marines-silver: #818181;
+  --dragons-lightblue-light: #e8f7fd;
+  --carp-red-light: #fbe7e8;
+  --baystars-darkblue-light: #e5ebf3;
+  --giants-orange-light: #fef1e6;
+  --swallows-green-light: #e5f3ed;
+  --tigers-yellow-light: #fcf6ea;
+  --bafalloes-gold-light: #f8f6eb;
+  --eagles-winered-light: #f4e5e9;
+  --fighters-blue-light: #e5eff4;
+  --hawks-gold-light: #fff7e5;
+  --lions-navy-light: #e5e8ed;
+  --marines-silver-light: #f2f2f2;
+}
+
+.D,
+.Dragons {
+  --team-color: var(--dragons-lightblue);
+  --team-bgcolor: var(--dragons-lightblue-light);
+}
+
+.C,
+.Carp {
+  --team-color: var(--carp-red);
+  --team-bgcolor: var(--carp-red-light);
+}
+
+.YB,
+.DB,
+.Baystars {
+  --team-color: var(--baystars-darkblue);
+  --team-bgcolor: var(--baystars-darkblue-light);
+}
+
+.G,
+.Giants {
+  --team-color: var(--giants-orange);
+  --team-bgcolor: var(--giants-orange-light);
+}
+
+.S,
+.Swallows {
+  --team-color: var(--swallows-green);
+  --team-bgcolor: var(--swallows-green-light);
+}
+
+.T,
+.Tigers {
+  --team-color: var(--tigers-yellow);
+  --team-bgcolor: var(--tigers-yellow-light);
+}
+
+.Bs,
+.B,
+.Buffaloes {
+  --team-color: var(--bafalloes-gold);
+  --team-bgcolor: var(--bafalloes-gold-light);
+}
+
+.E,
+.Eagles {
+  --team-color: var(--eagles-winered);
+  --team-bgcolor: var(--eagles-winered-light);
+}
+
+.F,
+.Fighters {
+  --team-color: var(--fighters-blue);
+  --team-bgcolor: var(--fighters-blue-light);
+}
+
+.H,
+.Hawks {
+  --team-color: var(--hawks-gold);
+  --team-bgcolor: var(--hawks-gold-light);
+}
+
+.M,
+.Marines {
+  --team-color: var(--marines-silver);
+  --team-bgcolor: var(--marines-silver-light);
+}
+
+.L,
+.Lions {
+  --team-color: var(--lions-navy);
+  --team-bgcolor: var(--lions-navy-light);
+}
+
+.standings {
+  --bg-color: white;
+  box-sizing: border-box;
+  width: 1152px;
+  height: 648px;
+  background: var(--bg-color, white);
+  overflow: hidden;
+  display: grid;
+  margin: 0 auto;
+  --thead-pad: -10px;
+  padding-top: calc(-2 * var(--thead-pad));
+  padding-bottom: 1.6em;
+}
+.standings table {
+  position: relative;
+  border-collapse: collapse;
+  background: var(--bg-color, white);
+  margin: 0 auto;
+  font-size: 1rem;
+  place-content: center;
+  width: 100%;
+}
+.standings table th,
+.standings table td {
+  font-size: 16px;
+}
+.standings table:after {
+  content: attr(data-updated);
+  font-size: 1em;
+  line-height: 1;
+  color: #333;
+  position: absolute;
+  bottom: -1.4em;
+  right: 5px;
+}
+.standings td {
+  text-align: right;
+  padding: 0.125em 0.5em 0.125em 0;
+  white-space: nowrap;
+}
+.standings .Central {
+  --league-color: var(--central-league-green);
+}
+.standings .Pacific {
+  --league-color: var(--pacific-league-blue);
+}
+.standings thead {
+  --record-width: 4.1em;
+  color: white;
+  position: relative;
+  top: var(--thead-pad);
+}
+.standings thead th {
+  box-sizing: border-box;
+  padding: 1px 4px 1px 0;
+  background: var(--league-color, gray);
+}
+.standings thead th:nth-of-type(1) {
+  width: 6em;
+}
+.standings thead th:nth-of-type(n+2):nth-of-type(-n+4) {
+  width: 2em;
+}
+.standings thead th:nth-of-type(5) {
+  width: 2.25em;
+}
+.standings thead th:nth-of-type(6) {
+  text-align: right;
+  width: 3em;
+  padding: 1px 8px 1px 0;
+}
+.standings thead th:nth-of-type(7),
+.standings thead th:nth-of-type(8) {
+  padding: 1px 2px 1px 0;
+  width: 2.75em;
+}
+.standings thead th:nth-of-type(9) {
+  padding: 1px 0;
+  width: 3.25em;
+}
+.standings thead th:nth-of-type(10),
+.standings thead th:nth-of-type(11),
+.standings thead th:nth-of-type(12) {
+  width: var(--record-width);
+  padding: 1px 0;
+}
+.standings thead th:nth-of-type(13) {
+  width: auto;
+  background: none;
+}
+.standings thead th:nth-of-type(n+14) {
+  background: var(--team-color);
+  width: var(--record-width);
+  padding: 1px 0;
+}
+.standings thead th:nth-last-of-type(1) {
+  background: var(--league-color, gray);
+}
+.standings tbody tr {
+  background: var(--team-bgcolor, crimson);
+}
+.standings tbody tr:nth-of-type(3n+1) {
+  font-weight: bold;
+  background: #c0c0c0;
+  border-top: 5px solid var(--team-color);
+}
+.standings tbody tr:nth-of-type(3n) {
+  background-image: linear-gradient(0deg, var(--bg-color) 4px, var(--team-bgcolor, crimson) 4px, var(--team-bgcolor, crimson) 100%);
+}
+.standings tbody tr:nth-last-of-type(1) {
+  background: var(--team-bgcolor, crimson);
+  border-bottom: 1px solid darkgray;
+}
+.standings tbody tr:nth-of-type(3n+1) td:nth-of-type(1) {
+  text-align: left;
+  font-weight: bold;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+}
+.standings tbody td:nth-of-type(1) {
+  text-align: right;
+}
+.standings tbody td:nth-of-type(n+10) {
+  text-align: center;
+  padding: 0;
+}
+
+:root {
+  --bg-color: cornsilk;
+}
+
+html {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+}
+
+.table-frame {
+  width: 1152px;
+  margin: 3rem auto;
+}
+
+/*# sourceMappingURL=npb-standings.css.map */

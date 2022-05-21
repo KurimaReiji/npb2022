@@ -1,0 +1,167 @@
+.standings {
+  --bg-color: white;
+  box-sizing: border-box;
+  width: 1152px;
+  height: 648px;
+  background: var(--bg-color,white);
+  overflow: hidden;
+  display: grid;
+  margin: 0 auto;
+  //border: 2px solid brown;
+  --thead-pad: -10px;
+  padding-top: calc(-2 * var(--thead-pad));
+  padding-bottom: 1.6em;
+
+  table {
+    position: relative;
+    border-collapse: collapse;
+    background: var(--bg-color,white);
+    margin: 0 auto;
+    font-size: 1rem;
+    place-content: center;
+    width: 100%;
+
+    th,
+    td {
+      font-size: 16px;
+    }
+
+    &:after {
+      content: attr(data-updated);
+      font-size: 1em;
+      line-height: 1;
+      color: #333;
+      position: absolute;
+      bottom: -1.4em;
+      right: 5px;
+    }
+  }
+
+  td {
+    text-align: right;
+    padding: .125em .5em .125em 0;
+    white-space: nowrap;
+  }
+
+  .Central {
+    --league-color: var(--central-league-green);
+  }
+
+  .Pacific {
+    --league-color: var(--pacific-league-blue);
+  }
+
+  thead {
+    --record-width: 4.1em;
+    color: white;
+    position: relative;
+    top: var(--thead-pad);
+
+    th {
+      box-sizing: border-box;
+      padding: 1px 4px 1px 0;
+      background: var(--league-color, gray);
+    }
+
+    // Teams
+    th:nth-of-type(1) {
+      width: 6em;
+    }
+
+    // W,L,T
+    th:nth-of-type(n+2):nth-of-type(-n+4) {
+      width: 2em;
+    }
+
+    // PCT
+    th:nth-of-type(5) {
+      width: 2.25em;
+    }
+
+    // Games Behind
+    th:nth-of-type(6) {
+      text-align: right;
+      width: 3em;
+      padding: 1px 8px 1px 0;
+    }
+
+    // Runs Scored/Allowd
+    th:nth-of-type(7),
+    th:nth-of-type(8) {
+      padding: 1px 2px 1px 0;
+      width: 2.75em;
+    }
+
+    // Run diff
+    th:nth-of-type(9) {
+      padding: 1px 0;
+      width: 3.25em;
+    }
+
+    // 1 run games, shutout
+    th:nth-of-type(10),
+    th:nth-of-type(11),
+    th:nth-of-type(12) {
+      width: var(--record-width);
+      padding: 1px 0;
+    }
+
+    // blank colummn
+    th:nth-of-type(13) {
+      width: auto;
+      background: none;
+    }
+
+    // head to head
+    th:nth-of-type(n+14) {
+      background: var(--team-color);
+      width: var(--record-width);
+      padding: 1px 0;
+    }
+
+    // interleague
+    th:nth-last-of-type(1) {
+      background: var(--league-color, gray);
+    }
+
+  }
+
+  tbody {
+    tr {
+      background: var(--team-bgcolor, crimson);
+    }
+
+    tr:nth-of-type(3n+1) {
+      font-weight: bold;
+      background: #c0c0c0;
+      border-top: 5px solid var(--team-color);
+    }
+
+    tr:nth-of-type(3n) {
+      background-image: linear-gradient(0deg, var(--bg-color) 4px, var(--team-bgcolor, crimson) 4px, var(--team-bgcolor, crimson) 100%);
+    }
+
+    tr:nth-last-of-type(1) {
+      background: var(--team-bgcolor, crimson);
+      border-bottom: 1px solid darkgray;
+    }
+
+    // team name
+    tr:nth-of-type(3n+1) td:nth-of-type(1) {
+      text-align: left;
+      font-weight: bold;
+      padding: .25em .5em .25em .5em;
+    }
+
+    // home and road
+    td:nth-of-type(1) {
+      text-align: right;
+    }
+
+    // W-L columns
+    td:nth-of-type(n+10) {
+      text-align: center;
+      padding: 0;
+    }
+  }
+}
