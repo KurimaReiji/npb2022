@@ -106,7 +106,7 @@ text {
 }
 
 .E, .Eagles {
-  --team-color: var(--eagles-red);
+  --team-color: var(--eagles-winered);
 }
 
 .F, .Fighters {
@@ -122,7 +122,7 @@ text {
 }
 
 .L, .Lions {
-  --team-color: var(--lions-blue);
+  --team-color: var(--lions-navy);
 }
 
 .off {
