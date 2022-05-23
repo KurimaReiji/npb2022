@@ -1,0 +1,241 @@
+:root {
+  --central-league-green: #0f8f2e;
+  --pacific-league-blue: #3fb1e5;
+  --interleague-red: #e60012;
+  --dragons-blue: #003378;
+  --dragons-lightblue: #1eb2e9;
+  --carp-red: #d30f1e;
+  --baystars-blue: #0096e0;
+  --baystars-darkblue: #003f8e;
+  --giants-orange: #f97709;
+  --swallows-green: #1a854f;
+  --swallows-green: #008a4a;
+  --swallows-blue: #2e4fb5;
+  --swallows-red: #ec1234;
+  --tigers-yellow: #ffdd00;
+  --tigers-yellow: #e6a930;
+  --tigers-black: #000000;
+  --bafalloes-navy: #092d5a;
+  --bafalloes-black: #000121;
+  --bafalloes-gold: #b8a536;
+  --eagles-winered: #940028;
+  --fighters-blue: #006298;
+  --hawks-gold: #ffb300;
+  --lions-navy: #00214b;
+  --marines-silver: #818181;
+  --dragons-lightblue-light: #e8f7fd;
+  --carp-red-light: #fbe7e8;
+  --baystars-darkblue-light: #e5ebf3;
+  --giants-orange-light: #fef1e6;
+  --swallows-green-light: #e5f3ed;
+  --tigers-yellow-light: #fcf6ea;
+  --bafalloes-gold-light: #f8f6eb;
+  --eagles-winered-light: #f4e5e9;
+  --fighters-blue-light: #e5eff4;
+  --hawks-gold-light: #fff7e5;
+  --lions-navy-light: #e5e8ed;
+  --marines-silver-light: #f2f2f2;
+}
+
+.D,
+.Dragons {
+  --team-color: var(--dragons-lightblue);
+  --team-bgcolor: var(--dragons-lightblue-light);
+}
+
+.C,
+.Carp {
+  --team-color: var(--carp-red);
+  --team-bgcolor: var(--carp-red-light);
+}
+
+.YB,
+.DB,
+.Baystars {
+  --team-color: var(--baystars-darkblue);
+  --team-bgcolor: var(--baystars-darkblue-light);
+}
+
+.G,
+.Giants {
+  --team-color: var(--giants-orange);
+  --team-bgcolor: var(--giants-orange-light);
+}
+
+.S,
+.Swallows {
+  --team-color: var(--swallows-green);
+  --team-bgcolor: var(--swallows-green-light);
+}
+
+.T,
+.Tigers {
+  --team-color: var(--tigers-yellow);
+  --team-bgcolor: var(--tigers-yellow-light);
+}
+
+.Bs,
+.B,
+.Buffaloes {
+  --team-color: var(--bafalloes-gold);
+  --team-bgcolor: var(--bafalloes-gold-light);
+}
+
+.E,
+.Eagles {
+  --team-color: var(--eagles-winered);
+  --team-bgcolor: var(--eagles-winered-light);
+}
+
+.F,
+.Fighters {
+  --team-color: var(--fighters-blue);
+  --team-bgcolor: var(--fighters-blue-light);
+}
+
+.H,
+.Hawks {
+  --team-color: var(--hawks-gold);
+  --team-bgcolor: var(--hawks-gold-light);
+}
+
+.M,
+.Marines {
+  --team-color: var(--marines-silver);
+  --team-bgcolor: var(--marines-silver-light);
+}
+
+.L,
+.Lions {
+  --team-color: var(--lions-navy);
+  --team-bgcolor: var(--lions-navy-light);
+}
+
+:root {
+  --bar-width: 7px;
+  --narrow-bar-width: 2px;
+  --bg-color: cornsilk;
+}
+
+.frame {
+  box-sizing: border-box;
+  width: 1152px;
+  height: 648px;
+  margin: 1rem auto;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color);
+  position: relative;
+}
+.frame:before, .frame:after {
+  position: absolute;
+  color: var(--team-color);
+  background: var(--team-bgcolor);
+}
+.frame:before {
+  content: attr(data-desc);
+  top: 1rem;
+  left: 35%;
+  white-space: pre;
+  text-align: center;
+  line-height: 1;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+.frame:after {
+  content: attr(data-team);
+  top: 4px;
+  right: 4px;
+  font-size: 100px;
+  font-family: "Meow Script", cursive;
+  padding: 0.25em 0.5em;
+}
+
+.bar {
+  min-width: var(--bar-width);
+  flex: 1;
+  height: 100%;
+  margin-right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid transparent;
+}
+.bar:hover {
+  cursor: pointer;
+}
+
+.upper, .lower {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upper {
+  justify-content: flex-end;
+  background: var(--team-bgcolor, blue);
+  background-image: repeating-linear-gradient(0deg, var(--team-bgcolor), var(--team-bgcolor) 90px, var(--team-color) 9px, var(--team-color) 91px);
+}
+
+.lower {
+  justify-content: flex-start;
+  box-sizing: border-box;
+  border-top: var(--narrow-bar-width) solid var(--team-color, crimson);
+  background-image: repeating-linear-gradient(180deg, var(--team-bgcolor), var(--team-bgcolor) 90px, lightgray 9px, lightgray 91px);
+}
+
+.upper .rdiff {
+  background: var(--team-color, blue);
+  opacity: 1;
+}
+
+.lower .rdiff {
+  background: var(--team-color, crimson);
+}
+
+.rdiff {
+  width: 100%;
+}
+
+.rs, .ra {
+  width: var(--narrow-bar-width);
+}
+
+.rs {
+  background: var(--team-color, blue);
+}
+
+.ra {
+  background: var(--team-color, crimson);
+}
+
+.team-selector {
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 0;
+  width: 1152px;
+  height: 2rem;
+}
+.team-selector li {
+  list-style: none;
+  text-align: center;
+  padding: 0.25em 0.5em;
+  flex: 1;
+  color: #fff;
+  background: var(--team-color, lightgray);
+}
+.team-selector li:hover {
+  cursor: pointer;
+  padding: 0.4em 0.5em;
+}
+
+.desc {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+/*# sourceMappingURL=gameresults.css.map */
