@@ -115,42 +115,53 @@
   --bar-width: 7px;
   --narrow-bar-width: 2px;
   --bg-color: cornsilk;
+  --padding-for-status-line: 1.5em;
+  --tic-height: calc(5 * 17.14px);
+}
+
+.wrapper {
+  box-sizing: border-box;
+  width: 1152px;
+  height: 648px;
+  margin: 1rem auto;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .frame {
   box-sizing: border-box;
   width: 1152px;
   height: 648px;
-  margin: 1rem auto;
-  padding: 4px;
+  padding: 4px 4px var(--padding-for-status-line) 4px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--bg-color);
-  position: relative;
 }
-.frame:before, .frame:after {
+
+.statusbar {
+  background: var(--team-color);
+  color: white;
+  font-size: 1em;
+  line-height: var(--padding-for-status-line);
+  width: calc(100% - 8px);
+  height: var(--padding-for-status-line);
   position: absolute;
-  color: var(--team-color);
-  background: var(--team-bgcolor);
+  bottom: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: space-between;
 }
-.frame:before {
-  content: attr(data-desc);
-  top: 1rem;
-  left: 35%;
-  white-space: pre;
+.statusbar > div:nth-of-type(1) {
+  text-align: left;
+  padding-left: 1em;
+}
+.statusbar > div:nth-of-type(1) {
   text-align: center;
-  line-height: 1;
-  font-family: sans-serif;
-  font-weight: bolder;
 }
-.frame:after {
-  content: attr(data-team);
-  top: 4px;
-  right: 4px;
-  font-size: 100px;
-  font-family: "Meow Script", cursive;
-  padding: 0.25em 0.5em;
+.statusbar > div:nth-of-type(3) {
+  text-align: right;
+  padding-right: 1em;
 }
 
 .bar {
@@ -177,14 +188,14 @@
 .upper {
   justify-content: flex-end;
   background: var(--team-bgcolor, blue);
-  background-image: repeating-linear-gradient(0deg, var(--team-bgcolor), var(--team-bgcolor) 90px, var(--team-color) 9px, var(--team-color) 91px);
+  background-image: repeating-linear-gradient(0deg, var(--team-bgcolor), var(--team-bgcolor) var(--tic-height), var(--team-color) var(--tic-height), var(--team-color) calc(1px + var(--tic-height)));
 }
 
 .lower {
   justify-content: flex-start;
   box-sizing: border-box;
   border-top: var(--narrow-bar-width) solid var(--team-color, crimson);
-  background-image: repeating-linear-gradient(180deg, var(--team-bgcolor), var(--team-bgcolor) 90px, lightgray 9px, lightgray 91px);
+  background-image: repeating-linear-gradient(180deg, var(--team-bgcolor), var(--team-bgcolor) var(--tic-height), lightgray var(--tic-height), lightgray calc(1px + var(--tic-height)));
 }
 
 .upper .rdiff {
@@ -212,6 +223,7 @@
   background: var(--team-color, crimson);
 }
 
+.sorter-selector,
 .team-selector {
   display: flex;
   align-items: center;
@@ -219,23 +231,28 @@
   padding: 0;
   width: 1152px;
   height: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
+.sorter-selector li,
 .team-selector li {
   list-style: none;
   text-align: center;
   padding: 0.25em 0.5em;
   flex: 1;
-  color: #fff;
-  background: var(--team-color, lightgray);
 }
+.sorter-selector li:hover,
 .team-selector li:hover {
   cursor: pointer;
   padding: 0.4em 0.5em;
 }
 
-.desc {
-  margin: 1rem auto;
-  text-align: center;
+.sorter-selector li {
+  background: var(--team-color, lightgray);
+}
+
+.team-selector li {
+  color: #fff;
+  background: var(--team-color, lightgray);
 }
 
 /*# sourceMappingURL=gameresults.css.map */

@@ -351,7 +351,7 @@ const nameToInitial = (name, year = "2022") => {
   let idx = 0;
   if (y <= 2019) idx = 10;
   if (y <= 2011 && y > 2004) idx = 9;
-  return find_team(name).alt[idx];
+  return find_team(name)?.alt[idx];
 };
 
 /**
@@ -359,7 +359,7 @@ const nameToInitial = (name, year = "2022") => {
  * @returns {string} nickname of the team in Japanese. e.g. ドラゴンズ、ライオンズ
  */
 const nameToNickname_ja = (name) => {
-  return find_team(name).alt[5];
+  return find_team(name)?.alt[5];
 };
 
 /**
@@ -367,7 +367,7 @@ const nameToNickname_ja = (name) => {
  * @returns {string} nickname of the team. e.g. Dragons, Lions
  */
 const nameToNickname_en = (name) => {
-  return find_team(name).alt[6];
+  return find_team(name)?.alt[6];
 };
 
 /**
