@@ -1,13 +1,40 @@
-import { find_team, nameToLeague, nameToNickname } from "./npb2022-teams.js";
 import {
   npbteams,
-  createGameResult,
+  nameToLeague,
+  nameToNickname_en as nameToNickname,
   daysFromOpeningDay,
+  createGameResult,
   team_selector,
   opponent,
   runsAllowed,
   runsScored,
 } from "./npb2022.js";
+
+const params = new URLSearchParams(location.search);
+
+const store = new Proxy(
+  {},
+  {
+    get: function (target, prop) {
+      return Reflect.get(...arguments);
+    },
+    set: function (target, prop, val) {
+      if (prop === "team") {
+        target[prop] = nameToNickname(val) ? nameToNickname(val) : "Dragons";
+      } else if (prop === "sorter") {
+        target[prop] = "byDate";
+        if (val in sorters) target[prop] = val;
+      }
+      // init を用意して、updateをわければなんとかなるかも。
+      if (["team", "sorter"].indexOf(prop) >= 0) {
+        if (target.team && target.sorter)
+          update_page(target.team, target.sorter);
+        return true;
+      }
+      return Reflect.set(...arguments);
+    },
+  }
+);
 
 const byDate = (a, b) => {
   if (a.date > b.date) return 1;
@@ -21,50 +48,53 @@ const byRunsScored = (a, b) => {
   return 0;
 };
 
+const byRunsAllowed = (a, b) => {
+  if (a.ra > b.ra) return 1;
+  if (a.ra < b.ra) return -1;
+  return 0;
+};
+
 const byRdiff = (a, b) => {
+  if (Math.abs(a.rs - a.ra) > Math.abs(b.rs - b.ra)) return 1;
+  if (Math.abs(a.rs - a.ra) < Math.abs(b.rs - b.ra)) return -1;
   if (a.rs - a.ra > b.rs - b.ra) return -1;
   if (a.rs - a.ra < b.rs - b.ra) return 1;
   return 0;
 };
 
-const draw_chart = (games, unit) => (team) => {
-  const headToHead25Games = npbteams
-    .filter(
-      (t) =>
-        t.league == find_team(team).league && team != nameToNickname(t.name)
-    )
-    .map((t) => [...new Array(25)].map((a) => nameToNickname(t.name)));
-  const interLeague3Games = npbteams
-    .filter((t) => t.league != find_team(team).league)
-    .map((t) => [...new Array(3)].map((a) => nameToNickname(t.name)));
-  const seasonGames = headToHead25Games
-    .concat(interLeague3Games)
-    .flat()
-    .map((t) => {
-      return {
-        team,
-        date: "2022-12-01",
-        opponent: t,
-        rs: -1,
-        ra: -1,
-      };
-    });
-  const myGames = games
+const sorters = {
+  byDate: [byRdiff, byRunsScored, byRunsAllowed, byDate],
+  byRunsScored: [byDate, byRdiff, byRunsAllowed, byRunsScored],
+  byRunsAllowed: [byDate, byRdiff, byRunsScored, byRunsAllowed],
+  byRdiff: [byDate, byRunsAllowed, byRunsScored, byRdiff],
+};
+
+const nicknames = npbteams.map((t) => nameToNickname(t));
+
+const update_page = (team, sorter) => {
+  update_title(team, sorter);
+  draw_chart(team, sorter);
+
+  window.history.pushState(null, "", `?team=${team}&sort=${sorter}`);
+};
+
+const draw_chart = (team, sorter) => {
+  const { maxRuns } = store;
+
+  const myGames = store.games
     .filter(team_selector(team))
     .map((g) =>
       Object.assign(g, { rs: runsScored(team)(g), ra: runsAllowed(team)(g) })
     );
-  myGames.forEach((g) => {
-    const idx = seasonGames.findIndex((g0) => g0.opponent == opponent(team)(g));
-    seasonGames[idx] = Object.assign({}, g);
-  });
-  //const sorted = seasonGames.sort(byDate);
-  //const sorted = seasonGames.sort(byDate).sort(byRdiff).sort(byRunsScored);
-  const sorted = myGames.sort(byDate).sort(byRdiff).sort(byRunsScored);
+  const sorted = sorters[sorter].reduce((acc, cur) => {
+    return myGames.sort(cur);
+  }, myGames);
+
+  const wrapper = document.querySelector(".wrapper");
   const frame = document.querySelector(".frame");
   frame.replaceChildren();
-  frame.classList.remove(...frame.classList);
-  frame.classList.add("frame", team);
+  wrapper.classList.remove(...wrapper.classList);
+  wrapper.classList.add("wrapper", team);
   frame.dataset.team = team;
   const divs = sorted.map((g) => {
     const opp = g.opponent || opponent(team)(g);
@@ -91,7 +121,11 @@ const draw_chart = (games, unit) => (team) => {
     ra.dataset.value = g.url ? runsAllowed(team)(g) : 0;
     rdiff.dataset.value = Number(rs.dataset.value) - Number(ra.dataset.value);
     rdiff.dataset.diff = 0;
-    const str = `${g.date} ${team} ${rs.dataset.value}-${ra.dataset.value} ${opp}`;
+    const d = new Intl.DateTimeFormat("en-US", {
+      month: "short",
+      day: "numeric",
+    }).format(new Date(`${g.date}T12:00`));
+    const str = `${team} ${rs.dataset.value}-${ra.dataset.value} ${opp}, ${d}`;
     bar.dataset.desc = str;
     if (Number(rdiff.dataset.value) > 0) {
       upper.append(rdiff);
@@ -106,34 +140,44 @@ const draw_chart = (games, unit) => (team) => {
   });
   frame.append(...divs);
 
+  const barHeight = Number(
+    window
+      .getComputedStyle(document.querySelector(`.bar`))
+      .height.replace("px", "")
+  );
+  const unit = barHeight / (2 * maxRuns + 2);
+
   [...document.querySelectorAll(".rs, .ra, .rdiff")].forEach((el) => {
     const diff = Number(el.dataset.diff);
     const height = Math.abs(Number(el.dataset.value) - diff);
     el.style.height = `${height * unit}px`;
   });
+
   let disappearTimeout;
   [...document.querySelectorAll(".bar")].forEach((el) => {
     el.addEventListener("click", ({ currentTarget }) => {
       const bar = currentTarget;
-      frame.dataset.desc = bar.dataset.desc.replace(/ /, "\n");
+      const statusbar = document.querySelector(`.statusbar`);
+      statusbar.dataset.desc = bar.dataset.desc;
       clearTimeout(disappearTimeout);
       disappearTimeout = setTimeout(() => {
-        frame.dataset.desc = "";
+        statusbar.dataset.desc = "";
       }, 2000);
     });
   });
 };
 
-document.addEventListener("DOMContentLoaded", async () => {
-  const year = "2022";
-  const jsonfile = `./games${year}.json`;
-  const inputs = await (await fetch(jsonfile, { cache: "no-cache" })).json();
-  const games = inputs.map(createGameResult);
-  const maxRuns = Math.max(...games.map((g) => g.home.score)); //17
-  const unit = 648 / (2 * maxRuns + 1);
+const update_title = (team, sorter) => {
+  const str = `Game Results of ${team} Order ${sorter.replace(
+    /[A-Z]/g,
+    " $&"
+  )}`;
+  const title = document.querySelector("title");
+  title.textContent = `${str} | NPB 2022`;
+  document.querySelector(`.statusbar`).dataset.title = str;
+};
 
-  draw_chart(games, unit)("Dragons");
-
+const create_team_selector = () => {
   const lis = npbteams
     .map((t) => nameToNickname(t.name))
     .map((name) => {
@@ -143,10 +187,86 @@ document.addEventListener("DOMContentLoaded", async () => {
       li.classList.add(name, nameToLeague(name));
       return li;
     });
+
   document.querySelector(".team-selector").append(...lis);
   [...document.querySelectorAll(".team-selector li")].forEach((li) => {
     li.addEventListener("click", ({ target }) => {
-      draw_chart(games, unit)(target.dataset.team);
+      store.team = target.dataset.team;
     });
   });
+};
+
+const create_sorter_selector = () => {
+  const lis = Object.keys(sorters).map((name) => {
+    const li = document.createElement("li");
+    li.textContent = name.replace(/[A-Z]/g, " $&");
+    li.dataset.sorter = name;
+    return li;
+  });
+
+  document.querySelector(`.sorter-selector`).append(...lis);
+
+  [...document.querySelectorAll(".sorter-selector li")].forEach((li) => {
+    li.addEventListener("click", ({ target }) => {
+      store.sorter = target.dataset.sorter;
+    });
+  });
+};
+
+create_team_selector();
+create_sorter_selector();
+
+const status_observer = new MutationObserver((mutationsList, observer) => {
+  for (const mutation of mutationsList) {
+    if (mutation.type === "attributes") {
+      if (mutation.attributeName === "data-updated") {
+        document.querySelector(`.statusbar>div:nth-of-type(3)`).textContent =
+          mutation.target.dataset.updated;
+      } else if (mutation.attributeName === "data-desc") {
+        document.querySelector(`.statusbar>div:nth-of-type(2)`).textContent =
+          mutation.target.dataset.desc;
+      } else if (mutation.attributeName === "data-title") {
+        document.querySelector(`.statusbar>div:nth-of-type(1)`).textContent =
+          mutation.target.dataset.title;
+      }
+    }
+  }
+});
+status_observer.observe(document.querySelector(`.statusbar`), {
+  attributes: true,
+});
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const year = "2022";
+  const jsonfile = `./games${year}.json`;
+  const inputs = await (await fetch(jsonfile, { cache: "no-cache" })).json();
+  store.games = inputs.map(createGameResult);
+  store.maxRuns = Math.max(...store.games.map((g) => g.home.score)); //17
+
+  const team = params.get("team") in nicknames ? params.get("team") : "Dragons";
+  const sorter = params.get("sort") in sorters ? params.get("sort") : "byDate";
+  update_page(team, sorter);
+  store.team = team;
+  store.sorter = sorter;
+  window.addEventListener("popstate", () => {
+    ["team", "sorter"].forEach((key) => {
+      store[key] = params.get(key);
+    });
+  });
+
+  const dates = ((g) => {
+    const gamedays = g.map((game) => game.date).sort();
+    const d = {
+      start: gamedays[0],
+      end: gamedays.slice(-1)[0],
+    };
+    d.duration = daysFromOpeningDay(d.end, d.start);
+    return d;
+  })(store.games);
+  const updated = new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  }).format(new Date(`${dates.end}T12:00`));
+  document.querySelector(`.statusbar`).dataset.updated = updated;
 });
