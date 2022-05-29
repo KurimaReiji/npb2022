@@ -2382,5 +2382,53 @@
     "score": "11 - 1",
     "place": "PayPayドーム",
     "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0529/f-g-03/",
+    "home": "北海道日本ハムファイターズ",
+    "road": "読売ジャイアンツ",
+    "score": "7 - 2",
+    "place": "札幌ドーム",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0529/e-s-03/",
+    "home": "東北楽天ゴールデンイーグルス",
+    "road": "東京ヤクルトスワローズ",
+    "score": "3 - 1",
+    "place": "楽天生命パーク",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0529/l-db-03/",
+    "home": "埼玉西武ライオンズ",
+    "road": "横浜DeNAベイスターズ",
+    "score": "3 - 2",
+    "place": "ベルーナドーム",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0529/m-t-03/",
+    "home": "千葉ロッテマリーンズ",
+    "road": "阪神タイガース",
+    "score": "3 - 2",
+    "place": "ZOZOマリン",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0529/b-d-03/",
+    "home": "オリックス・バファローズ",
+    "road": "中日ドラゴンズ",
+    "score": "8 - 0",
+    "place": "京セラD大阪",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0529/h-c-03/",
+    "home": "福岡ソフトバンクホークス",
+    "road": "広島東洋カープ",
+    "score": "8 - 0",
+    "place": "PayPayドーム",
+    "status": "試合終了"
   }
 ]
