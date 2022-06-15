@@ -1,0 +1,43 @@
+:root {
+
+  --central-league-green: #0f8f2e;
+  --pacific-league-blue: #3fb1e5;
+  --interleague-red: #e60012;
+
+  --dragons-blue: #003378;
+  --dragons-lightblue: #1eb2e9;
+  --carp-red: #d30f1e;
+  --baystars-blue: #0096e0;
+  --baystars-darkblue: #003f8e;
+  --giants-orange: #f97709;
+  --swallows-green: #1a854f;
+  --swallows-green: #008a4a;
+  --swallows-blue: #2e4fb5;
+  --swallows-red: #ec1234;
+  --tigers-yellow: #ffdd00;
+  --tigers-yellow: #e6a930;
+  --tigers-black: #000000;
+  
+  --bafalloes-navy: #092d5a;
+  --bafalloes-black: #000121;
+  --bafalloes-gold: #b8a536;
+  --eagles-winered: #940028;
+  --fighters-blue: #006298;
+  --hawks-gold: #ffb300;
+  --lions-navy: #00214b;
+  --marines-silver: #818181;
+
+  --dragons-lightblue-light: #e8f7fd;
+  --carp-red-light: #fbe7e8;
+  --baystars-darkblue-light: #e5ebf3;
+  --giants-orange-light: #fef1e6;
+  --swallows-green-light: #e5f3ed;
+  --tigers-yellow-light: #fcf6ea;
+
+  --bafalloes-gold-light: #f8f6eb;
+  --eagles-winered-light: #f4e5e9;
+  --fighters-blue-light: #e5eff4;
+  --hawks-gold-light: #fff7e5;
+  --lions-navy-light: #e5e8ed;
+  --marines-silver-light: #f2f2f2;
+}

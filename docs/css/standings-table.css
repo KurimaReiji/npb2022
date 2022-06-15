@@ -1,0 +1,131 @@
+.standings {
+  --bg-color: white;
+  box-sizing: border-box;
+  width: auto;
+  background: var(--bg-color, white);
+  overflow: hidden;
+  margin: 0 auto;
+  --thead-pad: -10px;
+  padding-top: calc(-2 * var(--thead-pad));
+  padding-bottom: 1.6em;
+  --tr-pad: 10px;
+}
+
+table {
+  position: relative;
+  border-collapse: collapse;
+  background: var(--bg-color, white);
+  margin: 0;
+  width: 100%;
+}
+
+table:after {
+  content: attr(data-updated);
+  font-size: 1em;
+  line-height: 1;
+  color: var(--text-color, #333);
+  position: absolute;
+  bottom: -1.4em;
+  right: 5px;
+}
+
+th,
+td {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+td {
+  text-align: right;
+  padding: 0.25em 0.5em 0.125em 0;
+  white-space: nowrap;
+}
+
+thead {
+  --record-width: 4.1em;
+  color: white;
+  position: relative;
+  top: var(--thead-pad);
+}
+thead th {
+  box-sizing: border-box;
+  padding: 1px 4px 1px 0;
+  background: var(--league-color, gray);
+}
+thead th:nth-of-type(1) {
+  width: 6em;
+}
+thead th:nth-of-type(n+2):nth-of-type(-n+4) {
+  width: 2em;
+}
+thead th:nth-of-type(5) {
+  width: 2.25em;
+}
+thead th:nth-of-type(6) {
+  text-align: right;
+  width: 3em;
+  padding: 1px 8px 1px 0;
+}
+thead th:nth-of-type(7),
+thead th:nth-of-type(8) {
+  padding: 1px 2px 1px 0;
+  width: 2.75em;
+}
+thead th:nth-of-type(9) {
+  padding: 1px 0;
+  width: 3.25em;
+}
+thead th:nth-of-type(10),
+thead th:nth-of-type(11),
+thead th:nth-of-type(12) {
+  width: var(--record-width);
+  padding: 1px 0;
+}
+thead th:nth-of-type(13) {
+  width: auto;
+  background: none;
+}
+thead th:nth-of-type(n+14) {
+  background: var(--team-color);
+  width: var(--record-width);
+  padding: 1px 0;
+}
+thead th:nth-last-of-type(1) {
+  background: var(--league-color, gray);
+}
+
+tbody {
+  position: relative;
+}
+tbody tr {
+  background: var(--team-bgcolor, crimson);
+}
+tbody tr:nth-of-type(3n+1) {
+  font-weight: bold;
+  background: #c0c0c0;
+  border-top: 5px solid var(--team-color);
+}
+tbody tr:nth-of-type(3n):nth-of-type(-3n+15) {
+  background-image: linear-gradient(0deg, var(--bg-color) var(--tr-pad), darkgray var(--tr-pad), darkgray calc(1px + var(--tr-pad)), var(--team-bgcolor) calc(1px + var(--tr-pad)), var(--team-bgcolor) 100%);
+}
+tbody tr:nth-of-type(3n):nth-of-type(-3n+15) td {
+  padding-bottom: var(--tr-pad);
+}
+tbody tr:nth-last-of-type(1) {
+  background: var(--team-bgcolor);
+  border-bottom: 1px solid darkgray;
+}
+tbody tr:nth-of-type(3n+1) td:nth-of-type(1) {
+  text-align: left;
+  font-weight: bold;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+}
+tbody td:nth-of-type(1) {
+  text-align: right;
+}
+tbody td:nth-of-type(n+10) {
+  text-align: center;
+  padding: 0;
+}
+
+/*# sourceMappingURL=standings-table.css.map */
