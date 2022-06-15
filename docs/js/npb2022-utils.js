@@ -1,4 +1,4 @@
-import { nameToNickname, nameToLeague } from "./npb2022-teams.js";
+import { nameToNickname, nameToLeague } from "npb2022-teams";
 
 /**
  * return nth day of the season. i.e. the opening day is Day 1.
@@ -243,6 +243,23 @@ const get_records = (team) => (games) => {
   return res;
 };
 
+const createElement = (tagName) => {
+  return ({ text = "", attr = {}, dataset = {}, cls = [] }) => {
+    const elm = document.createElement(tagName);
+    elm.textContent = text;
+    Object.keys(dataset).forEach((key) => {
+      elm.dataset[key] = dataset[key];
+    });
+    Object.keys(attr).forEach((name) => {
+      elm.setAttribute(name, attr[name]);
+    });
+    cls.forEach((name) => {
+      elm.classList.add(name);
+    });
+    return elm;
+  };
+};
+
 export {
   daysFromOpeningDay,
   dateFromUrl,
@@ -263,4 +280,5 @@ export {
   runsAllowed,
   headToHead,
   get_records,
+  createElement,
 };

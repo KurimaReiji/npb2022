@@ -1,0 +1,81 @@
+.D,
+.Dragons {
+  --team-color: var(--dragons-lightblue);
+  --team-bgcolor: var(--dragons-lightblue-light);
+}
+
+.C,
+.Carp {
+  --team-color: var(--carp-red);
+  --team-bgcolor: var(--carp-red-light);
+}
+
+.YB,
+.DB,
+.Baystars {
+  --team-color: var(--baystars-darkblue);
+  --team-bgcolor: var(--baystars-darkblue-light);
+}
+
+.G,
+.Giants {
+  --team-color: var(--giants-orange);
+  --team-bgcolor: var(--giants-orange-light);
+}
+
+.S,
+.Swallows {
+  --team-color: var(--swallows-green);
+  --team-bgcolor: var(--swallows-green-light);
+}
+
+.T,
+.Tigers {
+  --team-color: var(--tigers-yellow);
+  --team-bgcolor: var(--tigers-yellow-light);
+}
+
+.Bs,
+.B,
+.Buffaloes {
+  --team-color: var(--bafalloes-gold);
+  --team-bgcolor: var(--bafalloes-gold-light);
+}
+
+.E,
+.Eagles {
+  --team-color: var(--eagles-winered);
+  --team-bgcolor: var(--eagles-winered-light);
+}
+
+.F,
+.Fighters {
+  --team-color: var(--fighters-blue);
+  --team-bgcolor: var(--fighters-blue-light);
+}
+
+.H,
+.Hawks {
+  --team-color: var(--hawks-gold);
+  --team-bgcolor: var(--hawks-gold-light);
+}
+
+.M,
+.Marines {
+  --team-color: var(--marines-silver);
+  --team-bgcolor: var(--marines-silver-light);
+}
+
+.L,
+.Lions {
+  --team-color: var(--lions-navy);
+  --team-bgcolor: var(--lions-navy-light);
+}
+
+.Central {
+  --league-color: var(--central-league-green);
+}
+
+.Pacific {
+  --league-color: var(--pacific-league-blue);
+}

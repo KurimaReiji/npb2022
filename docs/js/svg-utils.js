@@ -27,9 +27,8 @@ const createSVG = (xRange, yRange) => {
         attr: {
           xmlns,
           preserveAspectRatio: "none",
-          viewBox: `${xRange[0]} ${yRange[0]} ${xRange[1] - xRange[0]} ${
-            yRange[1] - yRange[0]
-          }`,
+          viewBox: `${xRange[0]} ${yRange[0]} ${xRange[1] - xRange[0]} ${yRange[1] - yRange[0]
+            }`,
         },
       }
     )
@@ -87,7 +86,7 @@ const svgRectFitToText = (g) => {
   rect.setAttribute("height", bbox.height + 2 * yPad);
 };
 
-const createTics = (tics, scales) => {
+const createTics = (tics) => {
   const {
     xAxis,
     yAxis,
@@ -98,7 +97,6 @@ const createTics = (tics, scales) => {
     labelStyle,
     pathStyle,
   } = tics;
-  const { xScale, yScale, dx, dy } = scales;
 
   const gTics = createGroup({
     cls: ["tics"],
@@ -109,21 +107,17 @@ const createTics = (tics, scales) => {
       d: [
         [
           yTics
-            .map(
-              (y) =>
-                `M ${xScale(xAxis[0])} ${yScale(y)} h ${
-                  dx * (xAxis[1] - xAxis[0])
-                }`
-            )
+            .map((y) => {
+              const pos = isNaN(y) ? y.pos : y;
+              return `M ${xAxis[0]} ${pos} h ${xAxis[1] - xAxis[0]}`;
+            })
             .join(" "),
         ],
         [
           xTics
             .map((x) => {
               const pos = isNaN(x) ? x.pos : x;
-              return `M ${xScale(pos)} ${yScale(yAxis[0])} v ${
-                dy * (yAxis[1] - yAxis[0])
-              }`;
+              return `M ${pos} ${yAxis[0]} v ${yAxis[1] - yAxis[0]}`;
             })
             .join(" "),
         ],
@@ -135,10 +129,10 @@ const createTics = (tics, scales) => {
 
   yTics.forEach((y) => {
     const text = createText({
-      text: y,
+      text: y.text,
       attr: Object.assign({}, labelStyle, {
-        x: xScale(xTicsPos),
-        y: yScale(y),
+        x: xTicsPos,
+        y: y.pos,
       }),
       cls: ["ytics"],
     });
@@ -149,8 +143,8 @@ const createTics = (tics, scales) => {
     const text = createText({
       text: isNaN(x) ? x.text : x,
       attr: Object.assign({}, labelStyle, {
-        x: xScale(isNaN(x) ? x.pos : x),
-        y: yScale(yTicsPos),
+        x: isNaN(x) ? x.pos : x,
+        y: yTicsPos,
       }),
       cls: ["xtics"],
     });
@@ -160,9 +154,8 @@ const createTics = (tics, scales) => {
   return gTics;
 };
 
-const createAxis = (axis, scales) => {
+const createAxis = (axis) => {
   const { lines, pathStyle } = axis;
-  const { xScale, yScale } = scales;
 
   const gAxis = createGroup({
     cls: ["axis"],
@@ -172,9 +165,7 @@ const createAxis = (axis, scales) => {
     attr: Object.assign({}, pathStyle, {
       d: lines
         .map(([st, en]) => {
-          return `M ${xScale(st[0])} ${yScale(st[1])} L ${xScale(
-            en[0]
-          )} ${yScale(en[1])} `;
+          return `M ${st[0]} ${st[1]} L ${en[0]} ${en[1]} `;
         })
         .join(" "),
     }),
@@ -202,13 +193,14 @@ const createTextbox = (obj) => {
   return grp;
 };
 
-const createBackgroundRect = (xRange, yRange) => {
+const createBackgroundRect = (svg) => {
+  const rect = svg.viewBox.baseVal;
   return createRect({
     attr: {
-      x: xRange[0],
-      y: yRange[0],
-      width: xRange[1] - xRange[0],
-      height: yRange[1] - yRange[0],
+      x: rect.x,
+      y: rect.y,
+      width: rect.width,
+      height: rect.height,
     },
     cls: ["bgRect"],
   });

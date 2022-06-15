@@ -111,6 +111,14 @@
   --team-bgcolor: var(--lions-navy-light);
 }
 
+.Central {
+  --league-color: var(--central-league-green);
+}
+
+.Pacific {
+  --league-color: var(--pacific-league-blue);
+}
+
 :root {
   --bar-width: 7px;
   --narrow-bar-width: 2px;
