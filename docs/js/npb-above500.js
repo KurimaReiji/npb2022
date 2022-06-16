@@ -538,7 +538,7 @@ class NpbAbove500 extends HTMLElement {
   update_pathname(league) {
     const [oldValue, newValue] = [
       this.params.appFrame.getAttribute("pathname"),
-      `/${league}/above500`,
+      `/npb2022/${league}/above500`,
     ];
     if (oldValue !== newValue)
       this.params.appFrame.setAttribute("pathname", newValue);
