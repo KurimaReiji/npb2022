@@ -376,7 +376,7 @@ class GameResults extends HTMLElement {
     if (!this.sorter) return;
     this.update_title(this.team, this.sorter);
     this.draw_chart(this.params.games, this.team, this.sorter, this.maxRuns);
-    this.update_pathname(`/${this.team}/${this.sorter}`);
+    this.update_pathname(`/npb2022/${this.team}/${this.sorter}`);
   }
 
   connectedCallback() {

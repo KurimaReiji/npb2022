@@ -218,14 +218,9 @@ class NpbStandings extends HTMLElement {
     }
   }
 
-  update_pathname(league) {
-    const [oldValue, newValue] = [
-      this.params.appFrame.getAttribute("pathname"),
-      `/${league}/standings`,
-    ];
-    console.log(oldValue, newValue);
-    if (oldValue !== newValue)
-      this.params.appFrame.setAttribute("pathname", newValue);
+  update_pathname(league, base = "/npb2022") {
+    const newValue = `${base}/${league}/standings`;
+    this.params.appFrame.setAttribute("pathname", newValue);
   }
 
   update_title(league) {
