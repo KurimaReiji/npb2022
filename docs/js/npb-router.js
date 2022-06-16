@@ -141,7 +141,7 @@ class NpbRouter extends HTMLElement {
       appEl = this.init(this.standings);
       appEl.setAttribute("updated", params.updated);
       appEl.setAttribute("league", path2.split("/").slice(-2, 2)[0]);
-    } else if (this.above500.routes.includes(path)) {
+    } else if (this.above500.routes.includes(path2)) {
       appEl = this.init(this.above500);
       appEl.setAttribute("updated", params.updated);
       appEl.setAttribute("league", path2.split("/").slice(-2, 2)[0]);
@@ -186,7 +186,7 @@ class NpbRouter extends HTMLElement {
     const anchor = createElement("a")({
       text: "Go to Home",
       attr: {
-        href: "/",
+        href: "../../Central/above500",
       },
     });
     this.container.replaceChildren();
