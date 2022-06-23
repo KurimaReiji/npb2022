@@ -1,0 +1,29 @@
+{
+  "date": "6月23日（木）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0623/g-db-10/",
+      "home": "読売ジャイアンツ",
+      "road": "横浜DeNAベイスターズ",
+      "score": "5 - 7",
+      "place": "東京ドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0623/d-s-11/",
+      "home": "中日ドラゴンズ",
+      "road": "東京ヤクルトスワローズ",
+      "score": "0 - 10",
+      "place": "バンテリンドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0623/c-t-11/",
+      "home": "広島東洋カープ",
+      "road": "阪神タイガース",
+      "score": "3 - 3",
+      "place": "マツダスタジアム",
+      "status": "試合終了"
+    }
+  ]
+}
