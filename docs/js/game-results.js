@@ -361,7 +361,7 @@ class GameResults extends HTMLElement {
     //console.log(`attr-change: ${name} ${newValue}`);
     if (oldValue === newValue) return;
     if (name == "updated") {
-      this.maxRuns = Math.max(...this.params.games.map((g) => g.home.score));
+      this.maxRuns = Math.max(...this.params.games.map((g) => Math.max(g.home.score,g.road.score)));
       this.statusbar.setAttribute("updated", this.params.updated);
     } else if (name == "team") {
       this.team = newValue;
