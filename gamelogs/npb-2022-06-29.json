@@ -1,0 +1,45 @@
+{
+  "date": "6月29日（水）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0629/g-d-14/",
+      "home": "読売ジャイアンツ",
+      "road": "中日ドラゴンズ",
+      "score": "2 - 3",
+      "place": "郡山",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0629/db-t-12/",
+      "home": "横浜DeNAベイスターズ",
+      "road": "阪神タイガース",
+      "score": "4 - 2",
+      "place": "横浜",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0629/c-s-11/",
+      "home": "広島東洋カープ",
+      "road": "東京ヤクルトスワローズ",
+      "score": "2 - 9",
+      "place": "マツダスタジアム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0629/l-f-13/",
+      "home": "埼玉西武ライオンズ",
+      "road": "北海道日本ハムファイターズ",
+      "score": "6 - 2",
+      "place": "ベルーナドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0629/b-e-11/",
+      "home": "オリックス・バファローズ",
+      "road": "東北楽天ゴールデンイーグルス",
+      "score": "6 - 1",
+      "place": "ほっと神戸",
+      "status": "試合終了"
+    }
+  ]
+}
