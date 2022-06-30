@@ -3502,5 +3502,21 @@
     "score": "6 - 1",
     "place": "ほっと神戸",
     "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0630/db-t-13/",
+    "home": "横浜DeNAベイスターズ",
+    "road": "阪神タイガース",
+    "score": "6 - 5",
+    "place": "横浜",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0630/c-s-12/",
+    "home": "広島東洋カープ",
+    "road": "東京ヤクルトスワローズ",
+    "score": "2 - 4",
+    "place": "マツダスタジアム",
+    "status": "試合終了"
   }
 ]
