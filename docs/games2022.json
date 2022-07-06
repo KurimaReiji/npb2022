@@ -3654,5 +3654,45 @@
     "score": "1 - 14",
     "place": "ZOZOマリン",
     "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0706/g-s-14/",
+    "home": "読売ジャイアンツ",
+    "road": "東京ヤクルトスワローズ",
+    "score": "4 - 3",
+    "place": "東京ドーム",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0706/db-d-09/",
+    "home": "横浜DeNAベイスターズ",
+    "road": "中日ドラゴンズ",
+    "score": "3 - 1",
+    "place": "横浜",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0706/t-c-12/",
+    "home": "阪神タイガース",
+    "road": "広島東洋カープ",
+    "score": "3 - 2",
+    "place": "甲子園",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0706/m-f-11/",
+    "home": "千葉ロッテマリーンズ",
+    "road": "北海道日本ハムファイターズ",
+    "score": "5 - 4",
+    "place": "ZOZOマリン",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0706/b-l-14/",
+    "home": "オリックス・バファローズ",
+    "road": "埼玉西武ライオンズ",
+    "score": "4 - 5",
+    "place": "京セラD大阪",
+    "status": "試合終了"
   }
 ]
