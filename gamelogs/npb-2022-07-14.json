@@ -1,0 +1,53 @@
+{
+  "date": "7月14日（木）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0714/d-s-13/",
+      "home": "中日ドラゴンズ",
+      "road": "東京ヤクルトスワローズ",
+      "score": "4 - 1",
+      "place": "バンテリンドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0714/t-g-15/",
+      "home": "阪神タイガース",
+      "road": "読売ジャイアンツ",
+      "score": "3 - 0",
+      "place": "甲子園",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0714/c-db-15/",
+      "home": "広島東洋カープ",
+      "road": "横浜DeNAベイスターズ",
+      "score": "3 - 4",
+      "place": "マツダスタジアム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0714/f-e-13/",
+      "home": "北海道日本ハムファイターズ",
+      "road": "東北楽天ゴールデンイーグルス",
+      "score": "6 - 0",
+      "place": "静岡",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0714/l-m-13/",
+      "home": "埼玉西武ライオンズ",
+      "road": "千葉ロッテマリーンズ",
+      "score": "2 - 1",
+      "place": "ベルーナドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0714/h-b-14/",
+      "home": "福岡ソフトバンクホークス",
+      "road": "オリックス・バファローズ",
+      "score": "2 - 3",
+      "place": "PayPayドーム",
+      "status": "試合終了"
+    }
+  ]
+}
