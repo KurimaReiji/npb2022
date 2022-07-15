@@ -1,0 +1,21 @@
+{
+  "date": "7月15日（金）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0715/g-c-16/",
+      "home": "読売ジャイアンツ",
+      "road": "広島東洋カープ",
+      "score": "3 - 6",
+      "place": "東京ドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0715/t-d-15/",
+      "home": "阪神タイガース",
+      "road": "中日ドラゴンズ",
+      "score": "2 - 1",
+      "place": "甲子園",
+      "status": "試合終了"
+    }
+  ]
+}
