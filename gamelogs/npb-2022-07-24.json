@@ -1,0 +1,45 @@
+{
+  "date": "7月24日（日）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0724/s-c-15/",
+      "home": "東京ヤクルトスワローズ",
+      "road": "広島東洋カープ",
+      "score": "4 - 2",
+      "place": "神宮",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0724/t-db-16/",
+      "home": "阪神タイガース",
+      "road": "横浜DeNAベイスターズ",
+      "score": "1 - 0",
+      "place": "甲子園",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0724/f-m-14/",
+      "home": "北海道日本ハムファイターズ",
+      "road": "千葉ロッテマリーンズ",
+      "score": "5 - 4",
+      "place": "札幌ドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0724/l-e-17/",
+      "home": "埼玉西武ライオンズ",
+      "road": "東北楽天ゴールデンイーグルス",
+      "score": "2 - 9",
+      "place": "ベルーナドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0724/b-h-17/",
+      "home": "オリックス・バファローズ",
+      "road": "福岡ソフトバンクホークス",
+      "score": "7 - 4",
+      "place": "京セラD大阪",
+      "status": "試合終了"
+    }
+  ]
+}
