@@ -28,7 +28,7 @@ const scraper = () => {
         status,
       };
     })
-    .filter((obj) => obj.status !== "中止");
+    .filter((obj) => obj.status !== "中止" && obj.status !== "ノーゲーム");
 
   const date = document.querySelector(`#games_wrapper h4 a[href^="/games/"]`)?.textContent.match(/\d+月\d+日（.）/)[0];
   return {
