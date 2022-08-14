@@ -1,0 +1,37 @@
+{
+  "date": "8月13日（土）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0813/g-c-20/",
+      "home": "読売ジャイアンツ",
+      "road": "広島東洋カープ",
+      "score": "4 - 1",
+      "place": "東京ドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0813/t-d-19/",
+      "home": "阪神タイガース",
+      "road": "中日ドラゴンズ",
+      "score": "0 - 2",
+      "place": "京セラD大阪",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0813/e-l-19/",
+      "home": "東北楽天ゴールデンイーグルス",
+      "road": "埼玉西武ライオンズ",
+      "score": "4 - 6",
+      "place": "楽天生命パーク",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0813/h-b-19/",
+      "home": "福岡ソフトバンクホークス",
+      "road": "オリックス・バファローズ",
+      "score": "5 - 4",
+      "place": "PayPayドーム",
+      "status": "試合終了"
+    }
+  ]
+}
