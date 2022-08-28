@@ -5566,5 +5566,53 @@
     "score": "6 - 0",
     "place": "京セラD大阪",
     "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0828/db-s-19/",
+    "home": "横浜DeNAベイスターズ",
+    "road": "東京ヤクルトスワローズ",
+    "score": "4 - 5",
+    "place": "横浜",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0828/d-t-23/",
+    "home": "中日ドラゴンズ",
+    "road": "阪神タイガース",
+    "score": "4 - 1",
+    "place": "バンテリンドーム",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0828/c-g-24/",
+    "home": "広島東洋カープ",
+    "road": "読売ジャイアンツ",
+    "score": "6 - 4",
+    "place": "マツダスタジアム",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0828/f-h-24/",
+    "home": "北海道日本ハムファイターズ",
+    "road": "福岡ソフトバンクホークス",
+    "score": "0 - 6",
+    "place": "札幌ドーム",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0828/m-e-23/",
+    "home": "千葉ロッテマリーンズ",
+    "road": "東北楽天ゴールデンイーグルス",
+    "score": "9 - 2",
+    "place": "ZOZOマリン",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0828/b-l-24/",
+    "home": "オリックス・バファローズ",
+    "road": "埼玉西武ライオンズ",
+    "score": "4 - 10",
+    "place": "京セラD大阪",
+    "status": "試合終了"
   }
 ]
