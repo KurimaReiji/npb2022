@@ -1,0 +1,53 @@
+{
+  "date": "9月11日（日）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0911/db-s-20/",
+      "home": "横浜DeNAベイスターズ",
+      "road": "東京ヤクルトスワローズ",
+      "score": "0 - 1",
+      "place": "横浜",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0911/t-d-24/",
+      "home": "阪神タイガース",
+      "road": "中日ドラゴンズ",
+      "score": "5 - 0",
+      "place": "甲子園",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0911/c-g-25/",
+      "home": "広島東洋カープ",
+      "road": "読売ジャイアンツ",
+      "score": "0 - 7",
+      "place": "マツダスタジアム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0911/e-m-25/",
+      "home": "東北楽天ゴールデンイーグルス",
+      "road": "千葉ロッテマリーンズ",
+      "score": "3 - 2",
+      "place": "楽天生命パーク",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0911/l-f-23/",
+      "home": "埼玉西武ライオンズ",
+      "road": "北海道日本ハムファイターズ",
+      "score": "3 - 0",
+      "place": "ベルーナドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0911/b-h-22/",
+      "home": "オリックス・バファローズ",
+      "road": "福岡ソフトバンクホークス",
+      "score": "3 - 4",
+      "place": "京セラD大阪",
+      "status": "試合終了"
+    }
+  ]
+}
