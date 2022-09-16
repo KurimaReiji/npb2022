@@ -1,0 +1,37 @@
+{
+  "date": "9月16日（金）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0916/db-c-24/",
+      "home": "横浜DeNAベイスターズ",
+      "road": "広島東洋カープ",
+      "score": "3 - 5",
+      "place": "横浜",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0916/d-s-22/",
+      "home": "中日ドラゴンズ",
+      "road": "東京ヤクルトスワローズ",
+      "score": "8 - 0",
+      "place": "バンテリンドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0916/e-h-23/",
+      "home": "東北楽天ゴールデンイーグルス",
+      "road": "福岡ソフトバンクホークス",
+      "score": "2 - 6",
+      "place": "楽天生命パーク",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0916/b-f-25/",
+      "home": "オリックス・バファローズ",
+      "road": "北海道日本ハムファイターズ",
+      "score": "3 - 6",
+      "place": "京セラD大阪",
+      "status": "試合終了"
+    }
+  ]
+}
