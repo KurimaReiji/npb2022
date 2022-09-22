@@ -6510,5 +6510,29 @@
     "score": "4 - 10",
     "place": "甲子園",
     "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0922/db-g-23/",
+    "home": "横浜DeNAベイスターズ",
+    "road": "読売ジャイアンツ",
+    "score": "3 - 0",
+    "place": "横浜",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0922/s-d-25/",
+    "home": "東京ヤクルトスワローズ",
+    "road": "中日ドラゴンズ",
+    "score": "0 - 3",
+    "place": "神宮",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0922/b-m-24/",
+    "home": "オリックス・バファローズ",
+    "road": "千葉ロッテマリーンズ",
+    "score": "5 - 13",
+    "place": "京セラD大阪",
+    "status": "試合終了"
   }
 ]
