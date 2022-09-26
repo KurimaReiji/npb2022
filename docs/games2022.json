@@ -6646,5 +6646,21 @@
     "score": "10 - 0",
     "place": "PayPayドーム",
     "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0926/f-e-25/",
+    "home": "北海道日本ハムファイターズ",
+    "road": "東北楽天ゴールデンイーグルス",
+    "score": "3 - 2",
+    "place": "札幌ドーム",
+    "status": "試合終了"
+  },
+  {
+    "url": "https://npb.jp/scores/2022/0926/h-m-24/",
+    "home": "福岡ソフトバンクホークス",
+    "road": "千葉ロッテマリーンズ",
+    "score": "2 - 1",
+    "place": "PayPayドーム",
+    "status": "試合終了"
   }
 ]
