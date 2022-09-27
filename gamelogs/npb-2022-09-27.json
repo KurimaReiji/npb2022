@@ -1,0 +1,45 @@
+{
+  "date": "9月27日（火）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/0927/s-t-23/",
+      "home": "東京ヤクルトスワローズ",
+      "road": "阪神タイガース",
+      "score": "1 - 4",
+      "place": "神宮",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0927/db-d-22/",
+      "home": "横浜DeNAベイスターズ",
+      "road": "中日ドラゴンズ",
+      "score": "8 - 3",
+      "place": "横浜",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0927/f-m-24/",
+      "home": "北海道日本ハムファイターズ",
+      "road": "千葉ロッテマリーンズ",
+      "score": "14 - 0",
+      "place": "札幌ドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0927/l-h-24/",
+      "home": "埼玉西武ライオンズ",
+      "road": "福岡ソフトバンクホークス",
+      "score": "4 - 1",
+      "place": "ベルーナドーム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/0927/b-e-24/",
+      "home": "オリックス・バファローズ",
+      "road": "東北楽天ゴールデンイーグルス",
+      "score": "1 - 6",
+      "place": "京セラD大阪",
+      "status": "試合終了"
+    }
+  ]
+}
