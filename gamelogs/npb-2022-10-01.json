@@ -1,0 +1,21 @@
+{
+  "date": "10月1日（土）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/1001/db-g-24/",
+      "home": "横浜DeNAベイスターズ",
+      "road": "読売ジャイアンツ",
+      "score": "1 - 0",
+      "place": "横浜",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/1001/l-h-25/",
+      "home": "埼玉西武ライオンズ",
+      "road": "福岡ソフトバンクホークス",
+      "score": "3 - 1",
+      "place": "ベルーナドーム",
+      "status": "試合終了"
+    }
+  ]
+}
