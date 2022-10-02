@@ -1,0 +1,53 @@
+{
+  "date": "10月2日（日）",
+  "games": [
+    {
+      "url": "https://npb.jp/scores/2022/1002/db-g-25/",
+      "home": "横浜DeNAベイスターズ",
+      "road": "読売ジャイアンツ",
+      "score": "2 - 3",
+      "place": "横浜",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/1002/t-s-25/",
+      "home": "阪神タイガース",
+      "road": "東京ヤクルトスワローズ",
+      "score": "3 - 3",
+      "place": "甲子園",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/1002/c-d-25/",
+      "home": "広島東洋カープ",
+      "road": "中日ドラゴンズ",
+      "score": "0 - 3",
+      "place": "マツダスタジアム",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/1002/e-b-25/",
+      "home": "東北楽天ゴールデンイーグルス",
+      "road": "オリックス・バファローズ",
+      "score": "2 - 5",
+      "place": "楽天生命パーク",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/1002/m-h-25/",
+      "home": "千葉ロッテマリーンズ",
+      "road": "福岡ソフトバンクホークス",
+      "score": "5 - 3",
+      "place": "ZOZOマリン",
+      "status": "試合終了"
+    },
+    {
+      "url": "https://npb.jp/scores/2022/1002/l-f-25/",
+      "home": "埼玉西武ライオンズ",
+      "road": "北海道日本ハムファイターズ",
+      "score": "2 - 4",
+      "place": "ベルーナドーム",
+      "status": "試合終了"
+    }
+  ]
+}
